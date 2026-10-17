@@ -20,7 +20,7 @@ int main()
 {
   int arr[10] = {23, 12, 18, 27, 35, 42, 51, 63, 74, 86};
   insertion_sort(arr);
-  for (size_t i = 1; i < sizeof(arr) / sizeof(int); i++)
+  for (size_t i = 0; i < sizeof(arr) / sizeof(int); i++)
   {
     printf("%d ", arr[i]);
   }
