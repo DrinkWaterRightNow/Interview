@@ -122,7 +122,6 @@ int main(void)
   int leds[] = {LED_GREEN, LED_YELLOW, LED_RED};
   uint8_t len = sizeof(leds) / sizeof(leds[0]);
   uint8_t i = 0;
-
   while (1)
   {
 
@@ -130,7 +129,7 @@ int main(void)
     {
       BSP_LED_Toggle(leds[i]);
       start = HAL_GetTick();
-      i = (i + 1) % 3;
+      i = (i + 1) % len;
     }
     /* USER CODE END WHILE */
 
