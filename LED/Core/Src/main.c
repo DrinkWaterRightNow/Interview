@@ -31,7 +31,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define INTERVAL 300
+#define INTERVAL 1000
 #define COUNT 3
 /* USER CODE END PD */
 
@@ -120,7 +120,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   uint32_t start = HAL_GetTick();
   int leds[] = {LED_GREEN, LED_YELLOW, LED_RED};
-  int i = 0;
+  uint8_t len = sizeof(leds) / sizeof(leds[0]);
+  uint8_t i = 0;
 
   while (1)
   {
